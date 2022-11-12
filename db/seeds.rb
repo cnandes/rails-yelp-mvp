@@ -13,9 +13,10 @@ categories = %w[chinese italian japanese french belgian]
 
 5.times do
   restaurant = Restaurant.create(
-    name: Faker::Movies::Lebowski.character,
+    name: Faker::Movies::LordOfTheRings.character,
     address: Faker::Address.street_address,
-    category: categories.sample
+    category: categories.sample,
+    phone_number: Faker::PhoneNumber.cell_phone_in_e164
   )
   puts "Created #{restaurant.name}"
 end

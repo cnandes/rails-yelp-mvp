@@ -1,6 +1,7 @@
 <h1>Restaurants</h1>
 <ul>
-  <% @restaurants.each do |restaurant| %>
-    <li><%= restaurant.name %></li>
+   <% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
   <% end %>
 </ul>
+<button class="btn btn-success"><%= link_to "+ New restaurant", restaurants_new_path, :style=>'color: white; text-decoration: none;' %></button>
